@@ -1,0 +1,36 @@
+.developers {
+  .container .row > * {
+    margin-bottom: 15px;
+  }
+
+  .developer-card {
+    height: 300px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 0px;
+    cursor: pointer;
+
+    .card-header {
+      height: 260px;
+      overflow: hidden;
+      padding: 0px;
+    }
+
+    .card-bottom {
+      height: 40px;
+      line-height: 40px;
+      padding-left: 10px;
+      color: #333;
+    }
+  }
+}
+
+input[name="search-query"] {
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+h2.page-title {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}

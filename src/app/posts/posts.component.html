@@ -1,0 +1,29 @@
+<section class="posts-of-developer w-100">
+ <div class="info position-relative w-100 h-100">
+   <a routerLink="/" class="position-absolute btn">
+     Go to home
+   </a>
+   <div class="position-absolute">
+     <h2>
+       {{ developer.id }}
+     </h2>
+     <p>
+       {{ developersRss.feed.description }}
+     </p>
+   </div>
+ </div>
+</section>
+<div *ngIf="!developersRss || developersRss.length === 0">Loading...</div>
+<section class="posts">
+  <div class="container">
+    <div *ngFor="let item of developersRss.items"  class="post d-block w-100 position-relative" (click)="moveOn(item.link)">
+      <div class="post-tumbnail position-absolute w-100 h-100" [ngStyle]="{'background-image': 'url(' + item.thumbnail + ')'}">
+      </div>
+      <div class="post-container position-relative w-100 h-100">
+        <h2 class="position-absolute">
+          {{ item.title }}
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>

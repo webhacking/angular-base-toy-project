@@ -1,0 +1,25 @@
+<h2 routerLink="/" class="d-inline-block page-title">
+  Dev.book
+</h2>
+<section id="search" class="w-100">
+  <div class="container">
+    <input #searchBox placeholder="What is looking for ?" name="search-query" (keyup)="search(searchBox.value)" class="w-100" />
+  </div>
+</section>
+
+<section class="developers">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4" *ngFor="let developer of developers">
+        <div class="developer-card" routerLink="/developers/{{ developer.id }}/posts">
+          <div class="card-header">
+            <img src="/assets/images/{{ developer.profile_image }}" class="w-100 h-100"/>
+          </div>
+          <div class="card-bottom">
+            {{ developer.id }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
